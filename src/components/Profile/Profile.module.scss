@@ -1,0 +1,20 @@
+.Profile {
+  min-width: 40px;
+  padding: 0 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.Button {
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+
+  svg:hover {
+    fill: #5555ff;
+  }
+}
