@@ -1,0 +1,24 @@
+.NavbarFrame {
+  display: flex;
+  align-self: center;
+  height: 48px;
+  background-color: #fff;
+}
+
+.NavbarContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1270px;
+  margin: 0px auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 36px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding: 0 56px;
+  }
+}
