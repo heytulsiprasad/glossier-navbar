@@ -1,0 +1,119 @@
+.ModalContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 376px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px;
+  z-index: 1000;
+}
+
+.ModalHeader {
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 1px;
+  padding: 0px 16px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(217, 217, 217) 0px 1px 0px;
+}
+
+.CloseBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    fill: rgb(0, 0, 0);
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px 0px 0px 16px;
+  }
+}
+
+.ItemsBar {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ModalBody {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.CartWindow {
+  width: 100%;
+  padding: 16px 16px 0px;
+
+  span {
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px 0px 6px;
+  }
+
+  .CylinderBox {
+    margin-top: 5px;
+    width: 100%;
+    height: 6px;
+    border: 1px solid rgb(245, 227, 231);
+    border-radius: 60px;
+    padding: 4px;
+
+    .progressbar {
+      width: 0%;
+      height: 4px;
+      margin: -2px 0px 0px;
+      background-color: rgb(245, 227, 231);
+      border-radius: 60px;
+      transition: width 2s ease-out 0s;
+    }
+  }
+}
+
+.EmptyDiv {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 64px;
+
+  svg {
+    fill: rgb(217, 217, 217);
+    transform: rotate(0deg);
+    width: 42px;
+    height: 42px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 16px 0px 0px;
+  }
+}
