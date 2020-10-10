@@ -1,8 +1,8 @@
 import React from "react";
 import { CSSTransition } from "react-transition-group";
 
-import { ReactComponent as Cross } from "./cross.svg";
-import { ReactComponent as Chevron } from "./chevron.svg";
+import { ReactComponent as Cross } from "./../../../assets/cross.svg";
+import { ReactComponent as Chevron } from "./../../../assets/chevron.svg";
 import styles from "./Modal.module.scss";
 
 function Modal({ onClose, active }) {

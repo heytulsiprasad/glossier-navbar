@@ -1,0 +1,315 @@
+.ModalContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 376px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px;
+  z-index: 1000;
+}
+
+.ModalHeader {
+  padding: 0 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 1px;
+}
+
+.IconCross {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 0%;
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    fill: #000;
+    outline: none;
+
+    &:hover {
+      fill: #0000ff;
+    }
+  }
+}
+
+.ModalTitle {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  text-align: center;
+  margin: 0;
+
+  h5 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+}
+
+.IconCart {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 0%;
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    fill: #000;
+    outline: none;
+
+    &:hover {
+      fill: #0000ff;
+    }
+  }
+}
+
+.ModalBody {
+  padding: 24px 32px 0px;
+}
+
+.LogInWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 15px;
+
+  a {
+    text-decoration: none;
+    color: #000;
+    margin: 0 0 8px;
+    cursor: pointer;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: none;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: rgb(85, 85, 85);
+    transition: all 0.15s linear 0s;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  a:hover {
+    border: 1px solid rgb(66, 133, 244);
+    
+    span {
+      color: rgb(66, 133, 244);
+    }
+  }
+}
+
+.Divider {
+  margin: 16px 0px 24px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.LogIn {
+  display: flex;
+  flex-direction: column;
+
+  .InputData {
+    width: 100%;
+    height: 48px;
+    text-align: left;
+    padding: 20px 16px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    transition: all 0.15s linear 0s;
+    color: rgb(0, 0, 0);
+    outline: none;
+
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      border-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus::placeholder {
+      color: rgb(119, 118, 120);
+    }
+
+    &:focus {
+      border-color: rgb(0, 0, 255);
+    }
+
+    &:focus + label > span {
+      color: rgb(0, 0, 255);
+      font-size: 11px;
+      transform: translateY(-9px);
+    }
+  } 
+
+  div {
+    position: relative;
+  }
+
+  div:nth-of-type(2) {
+    margin-top: 16px;
+  }
+
+  .LabelData {
+    justify-content: space-between;
+    vertical-align: top;
+    display: flex;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background-color: transparent;
+    padding: 16px;
+    white-space: nowrap;
+    transition: transform 0.2s ease 0s,
+    translate 0.2s ease 0s;
+
+    span {
+      position: relative;
+      left: 1px;
+      display: block;
+      float: left;
+      color: rgb(119, 118, 120);
+      font-size: 14px;
+      transform-origin: left top;
+      transition: transform 0.2s ease 0s,
+      translate 0.2s ease 0s;
+    }
+  }
+}
+
+.CheckBox {
+  margin-top: 16px;
+
+  .CheckboxLabel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 0;
+    color: rgb(119, 118, 120);
+    font-size: 14px;
+  }
+
+  span {
+    margin-left: 5px;
+  }
+}
+
+.ForgotPassword {
+  button {
+    margin-top: 13px;
+    outline: none;
+    border: none;
+    text-align: left;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  button:hover {
+    color: rgb(0, 0, 255);
+  }
+}
+
+.BtnGroup {
+  margin-top: 20px;
+
+
+  .SignIn {
+    transition: all 0.15s linear 0s;
+    cursor: pointer;
+    appearance: none;
+    display: inline-flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-shadow: none;
+    min-height: 40px;
+    border-radius: 3px;
+    border: 1px solid rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 24px;
+    text-transform: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    max-width: unset;
+    margin: 0px;
+    height: auto;
+    text-align: center;
+
+    &:hover {
+      background-color: rgb(51, 51, 51);
+    }
+  }
+
+  .BtnInfo {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 14px;
+  margin-top: 20px;
+  line-height: 20px;
+  }
+  
+  .CreateAccount {
+    transition: all 0.15s linear 0s;
+    cursor: pointer;
+    appearance: none;
+    display: inline-flex;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-shadow: none;
+    min-height: 40px;
+    border-radius: 3px;
+    border: 1px solid rgb(217, 217, 217);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 24px;
+    text-transform: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    margin-top: 20px;
+    height: auto;
+    text-align: center;
+
+    &:hover {
+      border-color: rgb(119, 118, 120);
+    }
+  }
+}
