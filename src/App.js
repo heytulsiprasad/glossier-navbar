@@ -1,12 +1,15 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
+import Layout from './components/Layout';
 import Navbar from './containers/Navbar';
+import Navlist from './containers/Navlist';
 
 function App() {
   return (
-    <Fragment>
+    <Layout>
       <Navbar />
-    </Fragment>
+      <Navlist />
+    </Layout>
   );
 }
 

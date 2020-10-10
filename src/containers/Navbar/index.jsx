@@ -9,7 +9,6 @@ import Cart from "./../../components/Cart"
 
 function Navbar () {
   return (
-    <div className={styles.NavbarFrame}>
       <div className={styles.NavbarContainer}>
         <ul className={styles.NavIconList}>
           <li><Hamburger /></li>
@@ -23,7 +22,6 @@ function Navbar () {
           <li><Cart /></li>
         </ul>
       </div>
-    </div>
   )
 }
 
