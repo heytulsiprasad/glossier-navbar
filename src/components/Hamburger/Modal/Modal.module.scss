@@ -1,0 +1,177 @@
+.ModalContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 376px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px,
+  rgba(0, 0, 0, 0.1) 0px 0px 1px;
+  z-index: 1000;
+  // animation-name: slide;
+  // animation-duration: 0.48s;
+  // animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  height: 100%;
+}
+
+// .slide {
+//   transform: translateX(0);
+  
+//   .slide-enter {
+//     transform: translateX(-100%);
+//   }
+  
+//   .slide-enter-active {
+//     transform: translateX(0);
+//     transition: transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+//   }
+  
+//   .slide-exit {
+//     transform: translateX(0);
+//   }
+  
+//   .slide-exit-active {
+//     transform: translateX(-100%);
+//     transition: transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+//   }
+// }
+
+
+.Controls {
+  width: 100%;
+  align-self: flex-start;
+  padding: 24px 32px;
+  margin-bottom: 16px;
+
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    fill: #000;
+    outline: none;
+  }
+
+  button:hover {
+    fill: #0000ff;
+  }
+}
+
+.ModalBodyMain {
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  overflow-y: auto;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.ModalItems {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  font-weight: 500;
+
+  li {
+    width: max-content;
+    padding: 8px 0;
+    font-size: 16px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    cursor: pointer;
+  }
+
+  li:hover {
+    color: #0000ff;
+  }
+}
+
+.ModalFooter {
+  padding: 32px;
+  align-self: flex-end;
+  margin: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.ModalDropdownContainer {
+  width: 100%;
+  position: relative;
+  height: fit-content;
+
+  select {
+    appearance: none;
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+    padding: 20px 16px 8px;
+    font-size: 16px;
+    line-height: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    transition: all 0.15s linear 0s;
+    color: #000;
+    
+    &:hover {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  
+    &:active {
+      border-color: rgb(0, 0, 255);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.DropdownLabel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translateY(-8px);
+  display: flex;
+  vertical-align: top;
+  justify-content: space-between;
+  width: 100%;
+  background-color: transparent;
+  padding: 16px;
+  white-space: nowrap;
+  transition: transform 0.2s ease 0s,
+  translate 0.2s ease 0s;
+  pointer-events: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.TextFieldSpan {
+  transform: scale(0.75);
+  color: #000;
+  position: relative;
+  left: 1px;
+  display: block;
+  pointer-events: none;
+  float: left;
+  transform-origin: left top;
+  transition: transform 0.2s ease 0s,
+  translate 0.2s ease 0s;
+}
+
+.IconWrapper {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+}
+
+// .TransitionGroup {
+//   border: 5px solid #000;
+
+// }

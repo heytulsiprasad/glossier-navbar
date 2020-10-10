@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 
-import Layout from './components/Layout';
+import Layout from './containers/Layout';
 import Navbar from './containers/Navbar';
 import Navlist from './containers/Navlist';
 import Sidebar from './containers/Sidebar';
