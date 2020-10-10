@@ -5,7 +5,6 @@ import { ReactComponent as Cross } from "./../../../assets/cross.svg";
 import { ReactComponent as Cart } from "./../../../assets/cart.svg";
 import { ReactComponent as Google } from "./../../../assets/google.svg";
 import { ReactComponent as Facebook } from "./../../../assets/facebook.svg";
-import { ReactComponent as Check } from "./../../../assets/check.svg";
 
 function Modal({ onClose }) {
   return (
