@@ -48,12 +48,8 @@ function Navlist() {
   }
 
   return (
-      <div className={styles.NavlistContainer}>
-        <ul
-          className={[styles.Navlist, hover ? styles.onHover : undefined].join(" ")}
-          onMouseEnter={hoverAreaEnter}
-          onMouseLeave={hoverAreaExit}
-        >
+      <div className={[styles.NavlistContainer, hover ? styles.onHover : undefined].join(" ")} onMouseLeave={hoverAreaExit}>
+        <ul className={styles.Navlist} onMouseEnter={hoverAreaEnter}>
           <li className={styles.NavlistItem} onMouseEnter={updateItems}>
             <a href="#/">Shop All</a>
           </li>
