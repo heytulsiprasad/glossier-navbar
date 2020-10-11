@@ -15,14 +15,19 @@ const defaultItems = [
     lead: "daily perfecting cream"
   },
   {
-    icon: "https://i.imgur.com/Pw40Uu8.jpeg",
-    name: "Body Hero Duo",
-    lead: "oil wash + perfecting cream"
+    icon: "https://i.imgur.com/FTqblXh.jpeg",
+    name: "Body Hero Daily Perfecting Cream",
+    lead: "daily perfecting cream"
   },
   {
-    icon: "https://i.imgur.com/GJmH6jm.jpg",
-    name: "Hand Cream",
-    lead: "Creme pour les mains"
+    icon: "https://i.imgur.com/FTqblXh.jpeg",
+    name: "Body Hero Daily Perfecting Cream",
+    lead: "daily perfecting cream"
+  },
+  {
+    icon: "https://i.imgur.com/FTqblXh.jpeg",
+    name: "Body Hero Daily Perfecting Cream",
+    lead: "daily perfecting cream"
   }
 ]
 
@@ -73,7 +78,7 @@ function Navlist() {
             <a href="#/">Meet the Grantees</a>
           </li>
         </ul>
-        {hover && <FeaturedItems items={items} />}
+        {hover ? <FeaturedItems items={items} /> : null}
       </div>
   )
 }

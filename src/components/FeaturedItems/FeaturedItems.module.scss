@@ -4,7 +4,122 @@
   top: 44px;
   width: 100%;
   text-align: center;
-  padding-bottom: 35px;
+  padding: 0 25px 35px;
   background: rgb(250, 250, 250);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Heading {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 25px 0px 0px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.ProductCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.ProductCard {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin: 15px;
+  max-width: 144px;
+}
+
+.ProductImageLink {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+}
+
+.ProductImage {
+  
+  img {
+    margin: 0 auto;
+      display: block;
+      object-fit: contain;
+      height: auto;
+      width: 10rem;
+  }
+}
+
+.ProductName {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  margin-top: 5px;
+
+  &:hover {
+    color: #337ab7;
+    text-decoration: underline;
+  }
+
+  p {
+    font-style: inherit;
+    font-weight: 500;
+    text-align: center;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0px 0px 4px;
+  }
+}
+
+.ProductLead {
+  color: rgb(0, 0, 0);
+  font-style: inherit;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0px;
+}
+
+.Footer {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+
+  a {
+    background: transparent;
+    border: none;
+    padding: 0px;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+
+    &:hover {
+      color: #337ab7;
+    }
+  }
 }
