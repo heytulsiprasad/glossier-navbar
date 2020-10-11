@@ -15,4 +15,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Mobile responsiveness
 - More accessibility features
 - Follow [AirBnb](https://airbnb.io/javascript/react/) React/JSX style guide
-- Smoother animations using [Framer Motion](https://www.framer.com/motion/)
