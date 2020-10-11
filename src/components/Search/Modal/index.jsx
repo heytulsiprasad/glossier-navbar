@@ -28,9 +28,9 @@ function Modal({ onClose }) {
                   className={styles.SearchInput}
                   id="search-input"
                   placeholder="Search for products, categories, content"
-                  maxlength="100"
-                  minlength="0"
-                  autocomplete="on"
+                  maxLength="100"
+                  minLength="0"
+                  autoComplete="on"
                   aria-label="Search for products, categories, content"
                 />
               </div>

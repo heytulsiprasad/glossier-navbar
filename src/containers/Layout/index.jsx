@@ -5,7 +5,6 @@ import ModalContext from './../../context/ModalContext/ModalContext';
 
 function Layout({ children }) {
   const context = useContext(ModalContext)
-  console.log(context)
 
   const isOpen = context.isCartOpen 
                   || context.isHamburgerOpen 
