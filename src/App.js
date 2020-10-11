@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 import Layout from './containers/Layout';
 import Navbar from './containers/Navbar';
 import Navlist from './containers/Navlist';
-import Sidebar from './containers/Sidebar';
+import Sidebar from './components/Sidebar';
 import ModalProvider from './context/ModalContext/ModalProvider';
 
 function App() {

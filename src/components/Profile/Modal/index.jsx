@@ -1,23 +1,44 @@
-import React from "react";
+import React, { useContext, useRef, useEffect } from "react";
 
 import styles from "./Modal.module.scss";
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
 import { ReactComponent as Cart } from "./../../../assets/cart.svg";
 import { ReactComponent as Google } from "./../../../assets/google.svg";
 import { ReactComponent as Facebook } from "./../../../assets/facebook.svg";
+import ModalContext from "../../../context/ModalContext/ModalContext";
 
-function Modal({ onClose }) {
+function Modal() {
+  const { isProfileOpen, toggleProfile } = useContext(ModalContext)
+  const node = useRef()
+
+  useEffect(() => {
+    if (isProfileOpen) {
+      const handleOutsideClick = (e) => {
+        if (node.current && !node.current.contains(e.target)) {
+          toggleProfile();
+        }
+      }
+
+      document.addEventListener("mousedown", handleOutsideClick);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleOutsideClick);
+      }
+    }
+  }, [isProfileOpen, toggleProfile]);
+
   return (
-    <div className={styles.ModalContainer}>
+    isProfileOpen && (
+      <div ref={node} className={styles.ModalContainer}>
       <div className={styles.ModalHeader}>
         <div className={styles.IconCross}>
-          <button onClick={onClose} type="button" aria-label="Close Menu"><Cross /></button>
+          <button onClick={toggleProfile} type="button" aria-label="Close Menu"><Cross /></button>
         </div>
         <div className={styles.ModalTitle}>
           <h5>Sign In</h5>
         </div>
         <div className={styles.IconCart}>
-          <button onClick={onClose} type="button" aria-label="Close Menu"><Cart /></button>
+          <button onClick={toggleProfile} type="button" aria-label="Close Menu"><Cart /></button>
         </div>
       </div>
       <div className={styles.ModalBody}>
@@ -63,6 +84,7 @@ function Modal({ onClose }) {
         </div>
       </div>
     </div>
+    )
   )
 }
 

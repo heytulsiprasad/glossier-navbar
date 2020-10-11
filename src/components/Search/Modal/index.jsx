@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 
 import styles from "./Modal.module.scss";
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
@@ -6,18 +6,40 @@ import { ReactComponent as Search } from "./../../../assets/search.svg";
 import BalmDotCom from "./../../../assets/search/balmdotcom.jpg";
 import BoyBrow from "./../../../assets/search/boybrow.jpg";
 import CloudPaint from "./../../../assets/search/cloudpaint.jpg";
+import ModalContext from "../../../context/ModalContext/ModalContext";
 
-function Modal({ onClose }) {
+function Modal() {
+  const { isSearchOpen, toggleSearch } = useContext(ModalContext)
+  const node = useRef()
+
+  useEffect(() => {
+    if (isSearchOpen) {
+      const handleOutsideClick = (e) => {
+        if (node.current && !node.current.contains(e.target)) {
+          toggleSearch();
+        }
+      }
+
+      document.addEventListener("mousedown", handleOutsideClick);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleOutsideClick);
+      }
+    }
+  }, [isSearchOpen, toggleSearch])
+
+
   return (
-    <div className={styles.ModalContainer}>
+    isSearchOpen && (
+      <div ref={node} className={styles.ModalContainer}>
       <div className={styles.Header}>
         <div className={styles.SearchContainer}>
           <div className={styles.SearchBox}>
             <div className={styles.IconPack}>
-              <button onClick={onClose} aria-label="Close search panel">
+              <button onClick={toggleSearch} aria-label="Close search panel">
                 <Cross />
               </button>
-              <button onClick={onClose} aria-label="Start Search">
+              <button onClick={toggleSearch} aria-label="Start Search">
                 <Search />
               </button>
             </div>
@@ -32,7 +54,7 @@ function Modal({ onClose }) {
                   minLength="0"
                   autoComplete="on"
                   aria-label="Search for products, categories, content"
-                />
+                  />
               </div>
             </div>
           </div>
@@ -116,6 +138,7 @@ function Modal({ onClose }) {
         </div>
       </div>
     </div>
+      )
   )
 }
 

@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 
 import styles from "./Modal.module.scss";
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
 import { ReactComponent as Abstract } from "./../../../assets/abstract.svg";
+import ModalContext from "../../../context/ModalContext/ModalContext";
 
-function Modal({ onClose }) {
+function Modal() {
+  const { isCartOpen, toggleCart } = useContext(ModalContext)
+  const node = useRef()
+
+  useEffect(() => {
+    if (isCartOpen) {
+      const handleOutsideClick = (e) => {
+        if (node.current && !node.current.contains(e.target)) {
+          toggleCart();
+        }
+      }
+
+      document.addEventListener("mousedown", handleOutsideClick);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleOutsideClick);
+      }
+    }
+  }, [isCartOpen, toggleCart])
+
+
   return (
-    <div className={styles.ModalContainer}>
+    isCartOpen && (
+      <div ref={node} className={styles.ModalContainer}>
       <div className={styles.ModalHeader}>
         <div className={styles.CloseBar}>
-          <button type="button" onClick={onClose}>
+          <button type="button" onClick={toggleCart}>
             <Cross />
           </button>
           <h2>Your Bag</h2>
@@ -31,6 +53,7 @@ function Modal({ onClose }) {
         </div>
       </div>
     </div>
+    )
   )
 }
 
