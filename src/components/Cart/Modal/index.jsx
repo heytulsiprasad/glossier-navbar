@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import styles from "./Modal.module.scss";
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
@@ -27,7 +28,7 @@ function Modal() {
 
 
   return (
-    isCartOpen && (
+    <CSSTransition in={isCartOpen} timeout={480} classNames="slideLeft" unmountOnExit>
       <div ref={node} className={styles.ModalContainer}>
       <div className={styles.ModalHeader}>
         <div className={styles.CloseBar}>
@@ -53,7 +54,7 @@ function Modal() {
         </div>
       </div>
     </div>
-    )
+    </CSSTransition>
   )
 }
 

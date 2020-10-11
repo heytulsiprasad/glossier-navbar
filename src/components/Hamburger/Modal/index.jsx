@@ -1,9 +1,11 @@
 import React, { useContext, useRef, useEffect } from "react";
+import { CSSTransition } from 'react-transition-group';
 
 import ModalContext from './../../../context/ModalContext/ModalContext';
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
 import { ReactComponent as Chevron } from "./../../../assets/chevron.svg";
 import styles from "./Modal.module.scss";
+import "./../../../Modals.css";
 
 function Modal() {
   const { isHamburgerOpen, toggleHamburger } = useContext(ModalContext);
@@ -25,9 +27,8 @@ function Modal() {
     }
   }, [isHamburgerOpen, toggleHamburger])
 
-
   return (
-    isHamburgerOpen && (
+      <CSSTransition in={isHamburgerOpen} timeout={480} classNames="slideRight" unmountOnExit>
         <div ref={node} className={styles.ModalContainer}>
           <div className={styles.Controls}>
             <button onClick={toggleHamburger} type="button" aria-label="Close Menu"><Cross/></button>
@@ -65,7 +66,7 @@ function Modal() {
             </div>
           </div>
         </div>
-    )
+      </CSSTransition>
   )
 }
 

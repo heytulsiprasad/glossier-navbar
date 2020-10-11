@@ -1,4 +1,5 @@
 import React, { useContext, useRef, useEffect } from "react";
+import { CSSTransition } from 'react-transition-group';
 
 import styles from "./Modal.module.scss";
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
@@ -28,7 +29,7 @@ function Modal() {
   }, [isProfileOpen, toggleProfile]);
 
   return (
-    isProfileOpen && (
+    <CSSTransition in={isProfileOpen} timeout={480} classNames="slideLeft" unmountOnExit>
       <div ref={node} className={styles.ModalContainer}>
       <div className={styles.ModalHeader}>
         <div className={styles.IconCross}>
@@ -84,7 +85,7 @@ function Modal() {
         </div>
       </div>
     </div>
-    )
+    </CSSTransition>
   )
 }
 

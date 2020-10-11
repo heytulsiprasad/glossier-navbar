@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import styles from "./Modal.module.scss";
 import { ReactComponent as Cross } from "./../../../assets/cross.svg";
@@ -30,7 +31,7 @@ function Modal() {
 
 
   return (
-    isSearchOpen && (
+    <CSSTransition in={isSearchOpen} timeout={480} classNames="slideDown" unmountOnExit>
       <div ref={node} className={styles.ModalContainer}>
       <div className={styles.Header}>
         <div className={styles.SearchContainer}>
@@ -137,9 +138,9 @@ function Modal() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </CSSTransition>
       )
-  )
 }
 
 export default Modal;
