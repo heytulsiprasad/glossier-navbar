@@ -3,8 +3,6 @@ import React from 'react'
 import styles from "./FeaturedItems.module.scss";
 
 function FeaturedItems({ items }) {
-  console.log(items);
-
   return (
     <div className={styles.FeaturedItems}>
       <h5 className={styles.Heading}>Featured</h5>

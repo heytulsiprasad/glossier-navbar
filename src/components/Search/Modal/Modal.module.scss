@@ -1,0 +1,382 @@
+.ModalContainer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  background: rgb(250, 250, 250);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 6px,
+  rgba(0, 0, 0, 0.1) 0px 0px 1px;
+  z-index: 1000;
+}
+
+.Header {
+  display: flex;
+  flex: 0 0 auto;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 1px;
+  padding: 0px;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(217, 217, 217) 0px 1px 0px;
+}
+
+.SearchContainer {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 16px;
+  margin-right: 16px;
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+
+  @media screen and (min-width: 1152px) {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+
+  @media screen and (min-width: 1441px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1312px;
+  }
+}
+
+.SearchBox {
+  position: relative;
+  display: flex;
+}
+
+.IconPack {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    width: 63px;
+  }
+
+  button {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    fill: rgb(0, 0, 0);
+
+    svg {
+      transform: rotate(0deg);
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.SearchBarContainer {
+  width: 100%;
+  margin-left: 8px;
+  display: flex;
+}
+
+.SearchBar {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.SearchInput {
+  width: 100%;
+  height: 48px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 16px;
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  padding: 0px;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.ProductCatalogue {
+  text-align: left;
+  overflow: hidden scroll;
+}
+
+.ProductContainer {
+  max-width: 100%;
+  margin: 0 16px;
+
+  @media screen and (min-width: 1024px) {
+    margin: 0 48px;
+  }
+
+  @media screen and (min-width: 1152px) {
+    margin: 0 64px;
+  }
+}
+
+.MainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+}
+
+.PopularSearches {
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  margin-left: unset;
+  margin-right: unset;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-basis: 25%;
+    width: 25%;
+    max-width: 25%;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 25%;
+    max-width: 25%;
+  }
+
+  @media screen and (min-width: 1152px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 25%;
+    max-width: 25%;
+  }
+
+  @media screen and (min-width: 1441px) {
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 25%;
+    max-width: 25%;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: unset;
+    margin-right: unset;
+  }
+}
+
+.PopularSearchesHeading {
+  font-style: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(85, 85, 85);
+  margin-top: 24px;
+  margin-bottom: 8px;
+  padding: 8px 24px 0px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+    padding: 0;
+  }
+}
+
+.PopularSearchesBox {
+  list-style-type: none;
+  padding: 0px;
+
+  li {
+    display: table;
+    cursor: pointer;
+
+
+    p {
+      color: rgb(0, 0, 0);
+      font-style: inherit;
+      text-transform: lowercase;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      margin: 0px 0px 24px;
+
+      &:hover {
+        color: rgb(0, 0, 255);
+      }
+    }
+  }
+}
+
+.PopularProductsContainer {
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  margin-left: unset;
+  margin-right: unset;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-basis: 75%;
+    width: 75%;
+    max-width: 75%;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 75%;
+    max-width: 75%;
+  }
+
+  @media screen and (min-width: 1152px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 75%;
+    max-width: 75%;
+  }
+
+  @media screen and (min-width: 1441px) {
+    display: block;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 75%;
+    max-width: 75%;
+  }
+}
+
+.PopularProducts {
+  display: flex;
+  flex-direction: column;
+}
+
+.PopularProductsHeading {
+  font-style: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(85, 85, 85);
+  margin: 8px 0px 16px;
+
+  @media screen and (min-width: 768px) {
+    margin: 24px 0;
+  }
+}
+
+.PopularProductsBox {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.Product {
+  width: 100%;
+  display: inline-block;
+  margin-right: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: min-content;
+    margin-right: 8px;
+  }
+}
+
+.ProductImage {
+    img {
+      margin: 0 auto;
+      display: block;
+      object-fit: contain;
+      height: auto;
+      width: 14.25rem;
+    }
+}
+
+.ProductInfo {
+  box-sizing: border-box;
+  padding-top: 13px;
+  min-height: 65px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 15px;
+    min-height: 115px;
+    width: 100%;
+  }
+
+  a {
+    background: transparent;
+    border: none;
+    padding: 0px;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+
+    &:hover {
+      color: rgb(0, 0, 255);
+      text-decoration: underline;
+    }
+  }
+
+  .productHeading {
+    font-style: inherit;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-right: 5px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+  }
+
+  .productDescription {
+    font-style: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px 0px 4px;
+  }
+
+  .productAvailability {
+    font-style: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
