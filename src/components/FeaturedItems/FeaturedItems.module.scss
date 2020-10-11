@@ -57,15 +57,16 @@
   
   img {
     margin: 0 auto;
-      display: block;
-      object-fit: contain;
-      height: auto;
-      width: 10rem;
+    display: block;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
   }
 }
 
 .ProductName {
   background: transparent;
+  width: 100%;
   border: none;
   padding: 0px;
   text-decoration: none;

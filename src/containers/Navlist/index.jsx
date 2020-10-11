@@ -2,38 +2,84 @@ import React, { useState } from "react";
 
 import styles from "./Navlist.module.scss";
 import FeaturedItems from './../../components/FeaturedItems/index';
+import HandCream from "./../../assets/featured/HandCream.png";
+import BodyheroCream from "./../../assets/featured/BodyheroCream.png";
+import BodyheroDuo from "./../../assets/featured/BodyheroDuo.png";
+import BodyHero from "./../../assets/featured/BodyHero.png";
+import BalmDotCom from "./../../assets/featured/balmdotcom.png";
+import BoybrowSilo from "./../../assets/featured/boybrow-silo.png";
+import FutureDew from "./../../assets/featured/futuredew.png";
+import LashSlick from "./../../assets/featured/lashslick.png";
+import ShopGrid from "./../../assets/featured/ShopGrid.png";
+import SuperPure from "./../../assets/featured/SuperPure.png";
 
-const defaultItems = [
+const listOfItems = [
   {
-    icon: "https://i.imgur.com/Jk7PQdt.jpg",
+    icon: HandCream,
+    name: "Hand Cream",
+    lead: "crème pour les mains"
+  },
+  {
+    icon: BodyHero,
     name: "Body Hero Daily Oil Wash",
     lead: "daily oil wash"
   },
   {
-    icon: "https://i.imgur.com/FTqblXh.jpeg",
+    icon: BodyheroCream,
     name: "Body Hero Daily Perfecting Cream",
     lead: "daily perfecting cream"
   },
   {
-    icon: "https://i.imgur.com/FTqblXh.jpeg",
-    name: "Body Hero Daily Perfecting Cream",
-    lead: "daily perfecting cream"
+    icon: BodyheroDuo,
+    name: "Body Hero Duo",
+    lead: "oil wash + perfecting cream"
   },
   {
-    icon: "https://i.imgur.com/FTqblXh.jpeg",
-    name: "Body Hero Daily Perfecting Cream",
-    lead: "daily perfecting cream"
+    icon: BalmDotCom,
+    name: "Balm Dotcom",
+    lead: "universal skin salve"
   },
   {
-    icon: "https://i.imgur.com/FTqblXh.jpeg",
-    name: "Body Hero Daily Perfecting Cream",
-    lead: "daily perfecting cream"
-  }
+    icon: BoybrowSilo,
+    name: "Boy Brow",
+    lead: "grooming pomade"
+  },
+  {
+    icon: FutureDew,
+    name: "Futuredew",
+    lead: "oil serum hybrid"
+  },
+  {
+    icon: LashSlick,
+    name: "Lash Slick",
+    lead: "film form mascara"
+  },
+  {
+    icon: ShopGrid,
+    name: "Priming Moisturizer Balance",
+    lead: "oil-control gel cream"
+  },
+  {
+    icon: SuperPure,
+    name: "Super Pure",
+    lead: "niacinamide + zinc serum"
+  },
 ]
+
+const getRandomArr = (len = 4, max = 9) => {
+  let randArr = []
+  
+  for (let i = 0; i < len; i++) {
+    let num = Math.floor(Math.random() * Math.floor(max))
+    randArr.push(listOfItems[num])
+  }
+
+  return randArr;
+}
 
 function Navlist() {
   const [hover, isHover] = useState(false);
-  const [items, setItems] = useState([...defaultItems]);
+  const [items, setItems] = useState(getRandomArr());
 
   const hoverAreaEnter = () => {
     isHover(true);
@@ -44,7 +90,7 @@ function Navlist() {
   }
 
   const updateItems = () => {
-    setItems([...defaultItems])
+    setItems(getRandomArr())
   }
 
   return (

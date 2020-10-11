@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] Carts Modal
 - [x] Navlist Items
 - [x] Dropdown on hover
-- [ ] Animate modals open/close
+- [x] Animate modals open/close
 
 ## Could be done
 
